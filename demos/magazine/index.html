@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../turn.min.js"></script>
+
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100%;
+	font-family:'hytiaotiaotijregular','幼圆';
+	overflow: hidden;
+}
+body{
+	background:url('images/bg.jpg');
+	background-size:cover;
+}
+@font-face {
+    font-family: 'hytiaotiaotijregular';
+    src:url('fonts/_-webfont.woff2') format('woff2'),
+         url('fonts/_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#magazine{
+	width:1152px;
+	height:752px;
+	margin:0 auto;
+	top:50%;
+	margin-top:-376px;
+}
+#magazine .turn-page{
+	background:#fbfff5;
+	background-size:100% 100%;
+}
+.photo1{
+	width:100%;
+	display:block;
+}
+#magazine>div{
+	position:relative;
+}
+.c1{
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-250px;
+}
+.p1{
+	position:absolute;
+	bottom:136px;
+	left:50px;
+	color:green;
+}
+.p2{
+	position:absolute;
+	bottom:80px;
+	left:300px;
+	font-size:80px;
+	margin:0;
+	color:blue;
+}
+.p2 span{
+	color:red;
+	font-size:100px;
+}
+.p3{
+	font-size:120px;
+	position:absolute;
+	top:10px;
+	left:50px;
+	color:red;
+}
+.p4{
+	font-size:120px;
+	position:absolute;
+	top:100px;
+	left:250px;
+	color:#32ff40;
+}
+.p5 p{
+	position:absolute;
+	left:20px;
+}
+.p5 p img{
+	width:100%;
+}
+.p5 .p5-1{
+	top:10px;
+}
+.p5 .p5-2{
+	top:130px;	
+	left:50px;
+}
+.p5 .p5-3{
+	top:240px;
+	width:120px;	
+}
+.p5 .p5-4{
+	top:330px;
+	left:47px;
+	width:75px;	
+}
+.p5 .p5-5{
+	top:400px;
+	width:100px;
+}
+.p6{
+	position:absolute;
+	top:20px;
+	left:20px;
+}
+.p7{
+	position:absolute;
+	bottom:101px;
+	left:20px;
+}
+.p8{
+	position:absolute;
+	bottom:60px;
+	left:20px;
+}
+.p9{
+	position:absolute;
+	top:30px;
+	left:20px;
+}
+.p10{
+	position:absolute;
+	top:30px;
+	left:20px;
+}
+.p11{
+	position:absolute;
+	top:30px;
+	right:60px;
+}
+.p12{
+	position:absolute;
+	top:30px;
+	right:60px;
+}
+.p13{
+	position:absolute;
+	top:30px;
+	left:10px;
+}
+.p14{
+	position:absolute;
+	top:30px;
+	left:50px;
+}
+.p15{
+	position:absolute;
+	top:30px;
+	right:40px;
+}
+</style>
+</head>
+<body>
+<audio src="mp3/sugar.mp3" autoplay loop></audio>
+<p class="c1"><img src="images/c1.png" alt=""></p>
+<div id="magazine">
+	<div>
+		<img class="photo1" src="pages/cover.gif" alt="">
+	</div>
+	<div>
+		<img class="photo1" src="pages/47.jpg" alt="">
+		<p class="p1"><img src="images/p1.png" alt=""></p>
+		<p class="p2"><span>2</span>Days</p>
+	</div>
+	<div>
+		<img class="photo1" src="pages/46.jpg" alt="">
+	</div>
+	<div>
+		<p class="p3">Hello</p>
+		<p class="p4">World!</p>
+		<img class="photo1" src="pages/45.jpg" alt="">
+	</div>
+	<div class="p5">
+		<p class="p5-1"><img src="images/p2.png" alt=""></p>
+		<p class="p5-2"><img src="images/p3.png" alt=""></p>
+		<p class="p5-3"><img src="images/p2.png" alt=""></p>
+		<p class="p5-4"><img src="images/p3.png" alt=""></p>
+		<p class="p5-5"><img src="images/p2.png" alt=""></p>
+		<img class="photo1" src="pages/44.jpg" alt="">
+	</div>
+	<div>
+		<p class="p6"><img src="images/p4.png" alt=""></p>
+		<img class="photo1" src="pages/43.jpg" alt="">
+	</div>
+	<div><img class="photo1" src="pages/42.jpg" alt=""></div>
+	<div>
+		<p class="p7"><img src="images/p5.png" alt=""></p>
+		<img class="photo1" src="pages/41.jpg" alt="">
+	</div>
+	<div><img class="photo1" src="pages/40.jpg" alt=""></div>
+	<div>
+		<p class="p8"><img src="images/p6.png" alt=""></p>
+		<img class="photo1" src="pages/38.jpg" alt="">
+	</div>
+	<div><img class="photo1" src="pages/37.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/34.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/33.jpg" alt=""></div>
+	<div>
+		<p class="p9"><img src="images/p7.png" alt=""></p>
+		<img class="photo1" src="pages/32.jpg" alt="">
+	</div>
+	<div>
+		<p class="p10"><img src="images/p8.png" alt=""></p>
+		<img class="photo1" src="pages/31.jpg" alt="">
+	</div>
+	<div>
+		<p class="p10"><img src="images/p9.png" alt=""></p>
+		<img class="photo1" src="pages/29.jpg" alt="">
+	</div>
+	<div>
+		<p class="p11"><img src="images/p10.png" alt=""></p>
+		<img class="photo1" src="pages/28.jpg" alt="">
+	</div>
+	<div>
+		<p class="p12"><img src="images/p11.png" alt=""></p>
+		<img class="photo1" src="pages/27.jpg" alt="">
+	</div>
+	<div>
+		<p class="p13"><img src="images/p12.png" alt=""></p>
+		<img class="photo1" src="pages/25.jpg" alt="">
+	</div>
+	<div>
+		<p class="p14"><img src="images/p13.png" alt=""></p>
+		<p class="p15"><img src="images/p14.png" alt=""></p>
+		<img class="photo1" src="pages/24.jpg" alt="">
+	</div>
+	<div>
+		<img class="photo1" src="pages/23.jpg" alt="">
+	</div>
+	<div><img class="photo1" src="pages/21.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/20.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/19.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/18.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/17.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/16.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/15.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/14.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/11.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/9.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/8.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/6.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/4.jpg" alt=""><img class="photo1" src="pages/12.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/2.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/1.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/3.jpg" alt=""></div>
+</div>
+
+
+<script type="text/javascript">
+
+	$(window).ready(function() {
+		$('#magazine').turn({
+			display: 'double',
+			acceleration: true,
+			elevation:50,
+			when: {
+				turned: function(e, page) {
+					console.log(page);
+				}
+			}
+		});
+		setInterval(function(){
+			if($('#magazine').turn('page')>=36){//最后一页
+				$('#magazine').turn('page', 1);
+			}else{
+				$('#magazine').turn('next');
+			}
+		},5000)
+	});
+	
+	
+	$(window).bind('keydown', function(e){
+		
+		if (e.keyCode==37)
+			$('#magazine').turn('previous');
+		else if (e.keyCode==39)
+			$('#magazine').turn('next');
+			
+	});
+
+</script>
+
+</body>
+</html>
