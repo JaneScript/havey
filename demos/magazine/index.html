@@ -47,9 +47,17 @@ body{
 }
 .c1{
 	position:absolute;
-	top:0;
+	top:50%;
 	left:50%;
-	margin-left:-250px;
+	margin-left:-200px;
+	margin-top:-376px;
+}
+.c2{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-560px;
+	margin-top:-376px;
 }
 .p1{
 	position:absolute;
@@ -160,11 +168,56 @@ body{
 	top:30px;
 	right:40px;
 }
+.hero{
+	position:absolute;
+	width:150px;
+	bottom:-300px;
+	z-index:1000;
+}
+.h1{
+	left:0;
+	-webkit-animation:heroes 5s ease .3s infinite;
+}
+.h2{
+	left:18%;
+	-webkit-animation:heroes 5s ease .6s infinite;
+}
+.h3{
+	left:36%;
+	-webkit-animation:heroes 5s ease .9s infinite;
+}
+.h4{
+	left:54%;
+	-webkit-animation:heroes 5s ease 1.2s infinite;
+}
+.h5{
+	left:72%;
+	-webkit-animation:heroes 5s ease 1.5s infinite;
+}
+.h6{
+	right:0;
+	-webkit-animation:heroes 5s ease 1.8s infinite;
+}
+@-webkit-keyframes heroes
+{
+20%  {-webkit-transform:translateY(0)}
+40%  {-webkit-transform:translateY(0)}
+60%  {-webkit-transform:translateY(-270px)}
+80%  {-webkit-transform:translateY(0)}
+100% {-webkit-transform:translateY(0)}
+}
 </style>
 </head>
 <body>
 <audio src="mp3/sugar.mp3" autoplay loop></audio>
 <p class="c1"><img src="images/c1.png" alt=""></p>
+<p class="c2"><img src="images/cover1.png" alt=""></p>
+<p class="h1 hero"><img src="images/h1.png" alt=""></p>
+<p class="h2 hero"><img src="images/h2.png" alt=""></p>
+<p class="h3 hero"><img src="images/h3.png" alt=""></p>
+<p class="h4 hero"><img src="images/h4.png" alt=""></p>
+<p class="h5 hero"><img src="images/h5.png" alt=""></p>
+<p class="h6 hero"><img src="images/h6.png" alt=""></p>
 <div id="magazine">
 	<div>
 		<img class="photo1" src="pages/cover.gif" alt="">
@@ -264,7 +317,7 @@ body{
 		$('#magazine').turn({
 			display: 'double',
 			acceleration: true,
-			elevation:50,
+			elevation:1000,
 			when: {
 				turned: function(e, page) {
 					console.log(page);
