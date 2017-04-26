@@ -209,7 +209,7 @@ body{
 </style>
 </head>
 <body>
-<audio src="mp3/sugar.mp3" autoplay loop></audio>
+<audio src="mp3/sugar.mp3" autoplay loop id="myAudio"></audio>
 <p class="c1"><img src="images/c1.png" alt=""></p>
 <p class="c2"><img src="images/cover1.png" alt=""></p>
 <p class="h1 hero"><img src="images/h1.png" alt=""></p>
@@ -244,7 +244,6 @@ body{
 		<img class="photo1" src="pages/44.jpg" alt="">
 	</div>
 	<div>
-		<p class="p6"><img src="images/p4.png" alt=""></p>
 		<img class="photo1" src="pages/43.jpg" alt="">
 	</div>
 	<div><img class="photo1" src="pages/42.jpg" alt=""></div>
@@ -262,7 +261,7 @@ body{
 	<div><img class="photo1" src="pages/33.jpg" alt=""></div>
 	<div>
 		<p class="p9"><img src="images/p7.png" alt=""></p>
-		<img class="photo1" src="pages/32.jpg" alt="">
+		<img class="photo1" src="pages/30.jpg" alt="">
 	</div>
 	<div>
 		<p class="p10"><img src="images/p8.png" alt=""></p>
@@ -296,23 +295,28 @@ body{
 	<div><img class="photo1" src="pages/20.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/19.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/18.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/51.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/17.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/16.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/15.jpg" alt=""></div>
-	<div><img class="photo1" src="pages/14.jpg" alt=""></div>
-	<div><img class="photo1" src="pages/11.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/9.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/8.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/6.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/4.jpg" alt=""><img class="photo1" src="pages/12.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/2.jpg" alt=""></div>
 	<div><img class="photo1" src="pages/1.jpg" alt=""></div>
+	<div><img class="photo1" src="pages/50.jpg" alt=""></div>
+	<div>
+		<img class="photo1" src="pages/48.jpg" alt="">
+		<img class="photo1" src="pages/49.jpg" alt="">
+	</div>
 	<div><img class="photo1" src="pages/3.jpg" alt=""></div>
+	<div><video src="mp4/laugh.mp4" id="myVideo" width="100%"></video></div>
 </div>
 
 
 <script type="text/javascript">
-
+	var ppage = 1;
 	$(window).ready(function() {
 		$('#magazine').turn({
 			display: 'double',
@@ -320,17 +324,22 @@ body{
 			elevation:1000,
 			when: {
 				turned: function(e, page) {
-					console.log(page);
+					if($('#magazine').turn('page')>=38){//最后一页
+						document.getElementById('myAudio').pause();
+						document.getElementById('myVideo').play();
+						setTimeout(function(){
+							ppage = 1;
+							document.getElementById('myAudio').play();
+							$('#magazine').turn('page', 1);
+						},17000)
+					}else{
+						setTimeout(function(){
+							$('#magazine').turn('page',ppage+=2);
+						},5000)
+					}
 				}
 			}
 		});
-		setInterval(function(){
-			if($('#magazine').turn('page')>=36){//最后一页
-				$('#magazine').turn('page', 1);
-			}else{
-				$('#magazine').turn('next');
-			}
-		},5000)
 	});
 	
 	
