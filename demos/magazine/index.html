@@ -165,7 +165,12 @@ body{
 }
 .p15{
 	position:absolute;
-	top:30px;
+	top:20px;
+	left:40px;
+}
+.p16{
+	position:absolute;
+	top:100px;
 	right:40px;
 }
 .hero{
@@ -205,6 +210,9 @@ body{
 60%  {-webkit-transform:translateY(-270px)}
 80%  {-webkit-transform:translateY(0)}
 100% {-webkit-transform:translateY(0)}
+}
+.p15{
+	position:absolute;
 }
 </style>
 </head>
@@ -246,7 +254,11 @@ body{
 	<div>
 		<img class="photo1" src="pages/43.jpg" alt="">
 	</div>
-	<div><img class="photo1" src="pages/42.jpg" alt=""></div>
+	<div>
+		<p class="p15"><img src="images/p15.png" alt=""></p>
+		<p class="p16"><img src="images/p16.png" alt=""></p>
+		<img class="photo1" src="pages/42.jpg" alt="">
+	</div>
 	<div>
 		<p class="p7"><img src="images/p5.png" alt=""></p>
 		<img class="photo1" src="pages/41.jpg" alt="">
@@ -324,19 +336,19 @@ body{
 			elevation:1000,
 			when: {
 				turned: function(e, page) {
-					if($('#magazine').turn('page')>=38){//最后一页
-						document.getElementById('myAudio').pause();
-						document.getElementById('myVideo').play();
-						setTimeout(function(){
-							ppage = 1;
-							document.getElementById('myAudio').play();
-							$('#magazine').turn('page', 1);
-						},17000)
-					}else{
-						setTimeout(function(){
-							$('#magazine').turn('page',ppage+=2);
-						},5000)
-					}
+					// if($('#magazine').turn('page')>=38){//最后一页
+					// 	document.getElementById('myAudio').pause();
+					// 	document.getElementById('myVideo').play();
+					// 	setTimeout(function(){
+					// 		ppage = 1;
+					// 		document.getElementById('myAudio').play();
+					// 		$('#magazine').turn('page', 1);
+					// 	},17000)
+					// }else{
+					// 	setTimeout(function(){
+					// 		$('#magazine').turn('page',ppage+=2);
+					// 	},5000)
+					// }
 				}
 			}
 		});
